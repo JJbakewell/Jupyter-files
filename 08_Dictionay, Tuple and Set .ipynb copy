@@ -1,0 +1,910 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Dictionay, Tuple and Set "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**[1] Tuple**<br>\n",
+    "**[2] Set**<br>\n",
+    "**[3] Dictionary**<br>\n",
+    "**[4] Zip function**<br>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## [1] Tuple\n",
+    "Tuple elements are ordered, immutable, and allow duplicate elements.\n",
+    "```python\n",
+    "data = (item1, item2, item3)\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- **Creation**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "tuple1 = ('A','B','C')\n",
+    "print(tuple1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "tuple2 = ('Python', [1,2,3,4], 50.2)\n",
+    "print(tuple2)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- **Accessing elements**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "tuple1[0]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "tuple1[0:2]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "tuple1[-1]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- **Compare with list**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Tuples are also iterable objects. \n",
+    "for i in tuple1:\n",
+    "    print(i)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Tuples are immutable\n",
+    "tuple2[0] = \"new values\""
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- **Packing and unpacking**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "tuple_info = ('Anna', 'anna@bi.no', 20, 2021)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "name, email, age, year = tuple_info"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(name, email, age, year, sep = \"\\n\" )"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Exercise.A"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**(A.1) Create a tuple named <code>timestamp</code> that contains the following three elements: 5, \"Oct\", 2023. Print out the tuple.**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**(A.2) Print out the last element in <code>timestamp</code>.**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**(A.3) Assign the values from <code>timestamp</code> to three variables named: day, month, year. Print out these variables.**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## [2] Set\n",
+    "Set elements are unordered, mutable, and only unique elements are allowed.\n",
+    "```python\n",
+    "data = {item1, item2, item3}\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- **Creation**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "set1 = {1,2,3}\n",
+    "print(set1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "set2 = {'abc',(1,2,3), 50.2}\n",
+    "print(set2)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- **Accessing elements**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# use a for loop\n",
+    "for i in set1:\n",
+    "    print(i)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- **Compare with list**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "letters = {'A','B','C','C','A','B'}\n",
+    "print(letters)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "mylist = ['A','B','B','A','C','C','A','B','C','B','A','C','A','B']"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "myset = set(mylist)\n",
+    "print(myset)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- **Methods - union, intersection, difference**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "setA = {1,2,3,4,5}\n",
+    "setB = {3,4,5,6,7,8}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Return a set containing the union of sets\n",
+    "setA.union(setB)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Returns a set, that is the intersection of two other sets\n",
+    "setA.intersection(setB)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Returns a set containing the difference between two or more sets\n",
+    "setA.difference(setB)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "setB.difference(setA)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Exercise.B"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**(B.1) Student A and student B have chosen the following courses for the next semester. Store their chosen courses in two sets named <code>set_a</code> and <code>set_b</code>. Print out these two sets.**\n",
+    "- student A: ELE0505, ELE3400, ELE1295, ELE7163, ELE9145\n",
+    "- student B: ELE0099, ELE7163, ELE0705, ELE3400, ELE6027"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**(B.2) Which courses will they take together?**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## [3] Dictionary\n",
+    "A dictionary is an unordered map-like structure. Unlike lists that store elements in an ordered sequence, dictionaries use key-value pairs instead.\n",
+    "```python\n",
+    "data = {key1: value1, key2: value1, key3: value3}\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### [3.1] Basics"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- **Creation**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "dict1 = {'S01':7.5, 'S02':8.0, 'S03':6.5}\n",
+    "print(dict1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# A dictionary key can be any immutable data type\n",
+    "dict2 = {'a':'test1', 1:'test2', 0.5: 'test3'}\n",
+    "print(dict2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "dict3 = {'k1':'abc', 'k2':10, 'k3':[1,2], 'k4':(3,4),'k5':{5,6}}\n",
+    "print(dict3)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# A dictionary values can be of any data type\n",
+    "dict3 = {'k1':'abc', 'k2':10, 'k3':[1,2], 'k4':(3,4),'k5':{5,6}}\n",
+    "print(dict3)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- **Access value by key**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "S01_info = {'Name':'Anna', 'Email':'anna@bi.no', 'Age':20, 'Year':2021}\n",
+    "print(S01_info)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "S01_info['Email']"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- **Operations**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "dict1 = {'S01':7.5, 'S02':8.0, 'S03':6.5}\n",
+    "print(dict1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Add a key-value pair\n",
+    "dict1['S04'] = 7.0\n",
+    "print(dict1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Delete a key-value pair\n",
+    "del dict1['S01']\n",
+    "print(dict1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Modify the value\n",
+    "dict1['S02'] = 9.0\n",
+    "print(dict1)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Exercise.C"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**(C.1) Create a dictionary using the following table. Print out the dictionary.**<br>\n",
+    "- **Key**: City.\n",
+    "- **Value**: Airport code"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "|City|Airport code|\n",
+    "|:-:|:-:|\n",
+    "|London|LHR| \n",
+    "|Amsterdam|AMS| \n",
+    "|Paris|ORY|\n",
+    "|Rome|FCO|\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**(C.2) Using the dictionary from (C.1), print the airport code for the city Rome.**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**(C.3) Add the following data to the dictionary. Print the updated dictionary.**\n",
+    "|City|Airport code|\n",
+    "|:-:|:-:|\n",
+    "|Oslo|OSL| "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**(C.4) Update the airport code for Paris from \"ORY\" to \"CDG\". Print the updated dictionary.**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### [3.2] Methods"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- **Get keys and values**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "S01_info.keys()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "S01_info.values()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "S01_info.items()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- **Loop through a dictionary**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Print all keys in the dictionary\n",
+    "for key in S01_info.keys():\n",
+    "    print(key)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Print all values in the dictionary\n",
+    "for value in S01_info.values():\n",
+    "    print(value)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Print all items in the dictionary\n",
+    "for items in S01_info.items():\n",
+    "    print(items)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Print all keys and values in the dictionary\n",
+    "for key, value in S01_info.items():\n",
+    "    print(f\"key: {key}; value: {value}\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Exercise.D"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**(D.1) Crerate a dictionary using the following table. Print out the dictionary.**<br>\n",
+    "- **Key**: Student_ID.\n",
+    "- **Value**: A list containing the three test scores."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "|Student_ID|Score for Test-1|Score for Test-2|Score for Test-3|\n",
+    "|:-:|:-:|:-:|:-:|\n",
+    "|S01|70| 85| 70|\n",
+    "|S02|65| 75| 80|\n",
+    "|S03|80| 70| 60|\n",
+    "|S04|70| 75| 75|"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**(D.2) Using the dictionary created in (D.1), retrieve and print the list of scores for the student <code>S02</code>.**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**(D.3) Print the second test score for all students**<br>\n",
+    "Expected result:<br>\n",
+    "S01: 85<br>\n",
+    "S02: 75<br>\n",
+    "S03: 70<br>\n",
+    "S04: 75<br>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**(D.4) Print the Student_IDs of students who scored at least 75 points on Test-3.**<br>\n",
+    "Expected result:<br>\n",
+    "S02<br>\n",
+    "S04<br>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## [4] Zip function"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- **Use <code>zip()</code> to create a zip object containing a set of tuples**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "ID_list = ['S01', 'S02', 'S03', 'S04', 'S05']\n",
+    "score_list = [7.0, 6.5, 9.0, 8.0, 7.5]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "zipped = zip(ID_list, score_list)\n",
+    "print(type(zipped))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "for item in zipped:\n",
+    "    print(item)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- **Create a list of tuples from two lists**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# step1: Create a zip object\n",
+    "zipped = zip(ID_list, score_list)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# step2: Convert zip object to list\n",
+    "list1 = list(zipped)\n",
+    "print(list1)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- **Create a dictionary from two lists**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# step1: Create a zip object\n",
+    "zipped = zip(ID_list, score_list)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# step2: Convert zip object to dictionary\n",
+    "dict1 = dict(zipped)\n",
+    "print(dict1)"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.4"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
